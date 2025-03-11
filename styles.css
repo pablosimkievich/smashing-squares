@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    background: #000;
+    font-family: 'Press Start 2P', cursive;
+    color: #0f0;
+    overflow: hidden;
+}
+
+.game-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.score-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: 2px 2px #000;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border: 2px solid #0f0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#timer {
+    color: #ff0;
+    margin-bottom: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#current-score {
+    color: #0f0;
+    margin-bottom: 5px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#high-score {
+    color: #0ff;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#gameCanvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#gameOverPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.popup-content {
+    background: #000;
+    border: 3px solid #0f0;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0 20px #0f0;
+    animation: glow 1.5s ease-in-out infinite alternate;
+    min-width: 300px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.popup-content h2 {
+    color: #0f0;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px #0f0;
+}
+
+.popup-content p {
+    color: #0f0;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+#startButton, #restartButton {
+    background: #000;
+    color: #0f0;
+    border: 2px solid #0f0;
+    padding: 1rem 2rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#startButton:hover, #restartButton:hover {
+    background: #0f0;
+    color: #000;
+    box-shadow: 0 0 15px #0f0;
+}
+
+.rules {
+    margin: 2rem 0;
+    text-align: left;
+    padding: 1rem;
+    border: 1px solid #0f0;
+    background: rgba(0, 255, 0, 0.1);
+}
+
+.rules p {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #0f0;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #0f0;
+    }
+    to {
+        box-shadow: 0 0 20px #0f0, 0 0 30px #0f0;
+    }
+}
+
+#score-overlay {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    z-index: 1000;
+    pointer-events: none; /* Make the overlay transparent to mouse events */
+}
+
+#current-score, #high-score, #timer {
+    margin: 5px;
+    pointer-events: none; /* Also apply to child elements */
+}
