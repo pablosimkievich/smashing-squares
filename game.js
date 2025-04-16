@@ -42,7 +42,7 @@ class Game {
             'assets/explosion.ogg',
             'assets/explosion.wav'
         ]);
-        this.explosionSound.volume = 0.3; // Adjust volume to 30%
+        this.explosionSound.volume = 0.15; 
     }
 
     loadAudioWithFallback(sources) {
@@ -290,6 +290,7 @@ class Game {
         // Play explosion sound with random pitch
         const explosionSoundClone = this.explosionSound.cloneNode();
         // Random pitch between 0.8 and 1.2 (20% variation)
+        explosionSoundClone.volume = 0.15; // Set volume for the clone (15%)
         explosionSoundClone.playbackRate = 0.8 + Math.random() * 0.4;
         explosionSoundClone.play();
 
