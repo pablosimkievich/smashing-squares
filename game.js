@@ -76,7 +76,7 @@ class Game {
         popup.id = 'gameOverPopup'; // Using same styles as game over popup
         popup.innerHTML = `
             <div class="popup-content">
-                <h2>80s CLICKER</h2>
+                <h2>SAMASHING SQUARES</h2>
                 <div class="rules">
                     <p>DESTROY SQUARES TO SCORE!</p>
                     <p>→ DOUBLE CLICK: Explode squares</p>
