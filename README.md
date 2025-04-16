@@ -1,6 +1,6 @@
 # Smashing Squares
 
-<img src="smashing-squares.png" alt="Smashing Squares Screenshot" style="border-radius: 10px;" width="400">
+<img src="smashing-squares.png" alt="Smashing Squares Screenshot" style="border-radius: 10px;">
 
 A fast-paced arcade game where you destroy colorful squares through collisions and explosions.
 
